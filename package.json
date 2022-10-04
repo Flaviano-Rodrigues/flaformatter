@@ -1,8 +1,8 @@
 {
   "name": "flaformatter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A formatter to easily your code",
-  "main": "./lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

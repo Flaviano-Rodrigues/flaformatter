@@ -9,6 +9,14 @@ exports.flaFormatter = function (e: { target: { value: any } }, type: any) {
             e.target.value = val.replace(/(\d{2})(\d{3})(\d{3})(\d{1})/, "$1.$2.$3-$4")
             break
         case 'cpf':
+            // 123.123.123-12
+            e.target.value = val.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+            break
+        case 'cnpj':
+            // 12.123.123/1234-12
+            e.target.value = val.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
+            break
+        case 'cpf/cnpj':
             // 123.123.123-12 ou 12.123.123/1234-12
             val.length === 11 ? e.target.value = val.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4") : e.target.value = val.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
             break
