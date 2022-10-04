@@ -10,5 +10,8 @@
     "formatter"
   ],
   "author": "Flaviano Rodrigues",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
