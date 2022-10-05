@@ -1,4 +1,4 @@
-exports.flaFormatter = function (e: { target: { value: any } }, type: any) {
+exports.flaformatter = function (e, type) {
 
     //retira os caracteres indesejados...
     let val = e.target.value.replace(/[^\d]/g, "")

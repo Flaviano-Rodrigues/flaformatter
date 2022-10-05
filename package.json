@@ -1,6 +1,6 @@
 {
   "name": "flaformatter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A formatter to easily your code",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,5 @@
     "formatter"
   ],
   "author": "Flaviano Rodrigues",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.8.4"
-  }
+  "license": "ISC"
 }
