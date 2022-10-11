@@ -2,9 +2,15 @@
   "name": "flaformatter",
   "version": "0.0.9",
   "description": "A formatter to easily your code",
+  "homepage": "https://github.com/Flaviano-Rodrigues/flaformatter",
+  "repository": {
+    "type": "git",
+    "directory": "flaformatter",
+    "url": "https://github.com/Flaviano-Rodrigues/flaformatter"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [
     "formatter"
