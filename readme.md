@@ -1,11 +1,11 @@
-# Hello World :D
+# Getting Started :D
 
 > A simple example. I promise to write a better readme
 
 Install:
     
 ```bash
-npm install flaformatter
+npm i flaformatter@latest
 ```
 
 <br />
@@ -16,12 +16,44 @@ Import:
 import flaFormatter from 'flaformatter'
 ```
 
+<br />
+
 Use:
 
 ```js
 <input maxlength={9} onChange={(a)=>flaFormatter(a,'cep')} />
 ```
+> The maxLength is optional. It is used to limit the number of characters
+
+<br />
 
 Response: 
     
     999999-99
+
+
+<br />
+
+## Available formats :
+
+<br />
+
+- `rg`: 12.123.123-1
+
+- `cpf`: 123.123.123-12
+
+- `cnpj`: 12.123.123/1234-12
+
+- `cpf/cnpj`: 123.123.123-12 or 12.123.123/1234-12
+
+- `telefone`: 1234 1234
+
+- `int`: 123456789
+
+- `celular`: (12) 12345-1234
+
+- `cep`: 12345-123
+
+- `money`: 123.123.123,12
+
+- `card`: 1234 1234 1234 1234
