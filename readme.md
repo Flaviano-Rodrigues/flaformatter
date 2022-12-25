@@ -57,3 +57,17 @@ Response:
 - `money`: 123.123.123,12
 
 - `card`: 1234 1234 1234 1234
+
+<br />
+
+## Feature maxLength :
+
+<br />
+
+You can set thrid param as `true` to use flaformatter default maxLength.
+
+example:
+
+```js
+<input onChange={()=>flaFormatter(a,'cep',true)} />
+```
