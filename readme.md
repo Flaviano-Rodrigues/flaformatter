@@ -5,7 +5,7 @@
 Install:
     
 ```bash
-npm i flaformatter@latest
+npm i flaformatter
 ```
 
 <br />
@@ -69,5 +69,5 @@ You can set thrid param as `true` to use flaformatter default maxLength.
 example:
 
 ```js
-<input onChange={()=>flaFormatter(a,'cep',true)} />
+<input onChange={(e)=>flaFormatter(e,'cep',true)} />
 ```
