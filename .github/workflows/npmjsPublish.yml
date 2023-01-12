@@ -1,4 +1,4 @@
-name: Publish to NPMJS
+name: Publicando no NPMJS
 on:
   release:
     types: [created]
@@ -6,10 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Verificando
         uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Instalando Node
         uses: actions/setup-node@v2
         with:
           registry-url: 'https://registry.npmjs.org'
@@ -17,7 +17,7 @@ jobs:
       - name: Instalando Dependências 🔧
         run: npm ci && npm run build
 
-      - name: Deploy para o NPMJS 📦
+      - name: Publicando no NPMJS 📦
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}

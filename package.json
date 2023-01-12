@@ -1,6 +1,6 @@
 {
   "name": "flaformatter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A formatter to easily your code",
   "homepage": "https://github.com/Flaviano-Rodrigues/flaformatter",
   "repository": {
@@ -12,10 +12,11 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "node test.js",
-    "build": "tsc --build",
+    "build": "tsc --build && npm run minify",
+    "minify": "esbuild dist/index.js --minify --outfile=dist/index.js --bundle --target=es2016 --allow-overwrite",
     "lint": "eslint ."
   },
-  "prepublish": "tsc --build",
+  "prepublish": "npm run build",
   "keywords": [
     "formatter"
   ],
@@ -23,6 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "esbuild": "^0.16.17",
     "eslint": "^8.30.0",
     "eslint-config-standard-with-typescript": "^24.0.0",
     "eslint-plugin-import": "^2.26.0",
