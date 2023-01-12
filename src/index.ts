@@ -6,7 +6,12 @@ interface e {
   }
 }
 
-const flaformatter = (e: e, type: string, setMax = false, callback = null): void => {
+const flaformatter = (
+  e: e,
+  type: 'letters' | 'rg' | 'cpf' | 'cnpj' | 'cpf/cnpj' | 'telefone' | 'int' | 'celular' | 'data' | 'cep' | 'money' | 'card',
+  setMax = false,
+  callback = null
+): void => {
   // retira os caracteres indesejados...
   let val = type === 'letters' ? e.target.value.replace(/[^a-zA-Z]/g, '') : e.target.value.replace(/[^\d]/g, '')
 

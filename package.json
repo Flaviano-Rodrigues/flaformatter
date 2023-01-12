@@ -1,6 +1,6 @@
 {
   "name": "flaformatter",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A formatter to easily your code",
   "homepage": "https://github.com/Flaviano-Rodrigues/flaformatter",
   "repository": {
@@ -13,7 +13,7 @@
   "scripts": {
     "test": "node test.js",
     "build": "tsc --build && npm run minify",
-    "minify": "esbuild dist/index.js --minify --outfile=dist/index.js --bundle --target=es2016 --allow-overwrite",
+    "minify": "esbuild dist/index.js --minify --outfile=dist/index.js --allow-overwrite",
     "lint": "eslint ."
   },
   "prepublish": "npm run build",
