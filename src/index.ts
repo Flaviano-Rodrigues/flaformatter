@@ -77,12 +77,12 @@ const flaformatter = (
         max(16)
         break
       case 'percent':
-        // 12.34% com limite até 100%
+        // 12.34%
         let percentValue = parseFloat(val.replace(',', '.'))
 
         percentValue = percentValue / 100
 
-        if (percentValue > 100) {
+        if (setMax && percentValue > 100) {
           percentValue = 100
         }
 
