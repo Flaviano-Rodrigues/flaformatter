@@ -8,7 +8,7 @@ interface e {
 
 const flaformatter = (
   e: e,
-  type: 'letters' | 'rg' | 'cpf' | 'cnpj' | 'cpf/cnpj' | 'telefone' | 'int' | 'celular' | 'data' | 'cep' | 'money' | 'card',
+  type: 'letters' | 'rg' | 'cpf' | 'cnpj' | 'cpf/cnpj' | 'telefone' | 'int' | 'celular' | 'data' | 'cep' | 'money' | 'card' | 'percent',
   setMax = false,
   callback = null
 ): void => {
@@ -75,6 +75,22 @@ const flaformatter = (
 
         val === 'NaN' ? e.target.value = '0,00' : e.target.value = val
         max(16)
+        break
+      case 'percent':
+        // 12.34% com limite até 100%
+        let percentValue = parseFloat(val.replace(',', '.'))
+
+        percentValue = percentValue / 100
+
+        if (percentValue > 100) {
+          percentValue = 100
+        }
+
+        val = percentValue.toFixed(2).replace('.', ',')
+
+        val === 'NaN' ? e.target.value = '0,00%' : e.target.value = `${val}%`
+
+        max(6)
         break
       case 'card':
         // 1234 1234 1234 1234

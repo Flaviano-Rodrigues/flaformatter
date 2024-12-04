@@ -58,6 +58,8 @@ Response:
 
 - `card`: 1234 1234 1234 1234
 
+- `percent`: 12,34%
+
 <br />
 
 ## Feature maxLength :
