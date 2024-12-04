@@ -60,6 +60,8 @@ Response:
 
 - `percent`: 12,34%
 
+- `time`: 12:34
+
 <br />
 
 ## Feature maxLength :

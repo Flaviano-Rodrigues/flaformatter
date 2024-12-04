@@ -8,7 +8,7 @@ interface e {
 
 const flaformatter = (
   e: e,
-  type: 'letters' | 'rg' | 'cpf' | 'cnpj' | 'cpf/cnpj' | 'telefone' | 'int' | 'celular' | 'data' | 'cep' | 'money' | 'card' | 'percent',
+  type: 'letters' | 'rg' | 'cpf' | 'cnpj' | 'cpf/cnpj' | 'telefone' | 'int' | 'celular' | 'data' | 'cep' | 'money' | 'card' | 'percent' | 'time',
   setMax = false,
   callback = null
 ): void => {
@@ -96,6 +96,11 @@ const flaformatter = (
         // 1234 1234 1234 1234
         val.length === 16 ? e.target.value = val.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1 $2 $3 $4') : e.target.value = val
         max(19)
+        break
+      case 'time':
+        // 12:34
+        e.target.value = val.replace(/(\d{2})(\d{2})/, '$1:$2')
+        max(5)
         break
       default:
         break
